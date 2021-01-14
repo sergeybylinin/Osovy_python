@@ -5,12 +5,19 @@
 Для выполнения расчета для конкретных значений необходимо запускать
 скрипт с параметрами.
 """
-print(__doc__)
+
+from sys import argv
 
 def payroll(hour: 'выработка в часах', rate: 'cтавка в часах',
             prize: 'премия в денежном эквиваленте'):
     salary = (hour * rate) + prize
     return salary
 
-if __name__ == '__main__':
-    print(payroll(50, 10, 200))
+hour, rate, prize = argv
+
+print('Выработка в часах: ', hour)
+print('Ставка в часах: ', rate)
+print('Премия: ', prize)
+print('Зарплата: ', payroll(hour, rate, prize))
+
+
