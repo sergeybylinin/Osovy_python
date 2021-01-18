@@ -9,5 +9,6 @@
 print(__doc__)
 
 L = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-new_L = [i for i in L if i-1 > i]
+
+new_L = [L[i] for i in range(1, len(L)) if L[i] > L[i-1]]
 print(new_L)
