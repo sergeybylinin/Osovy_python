@@ -1,0 +1,4 @@
+2. Create a text file (not programmatically),
+save several lines in it,
+count the number of lines,
+the number of words in each line.
